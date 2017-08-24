@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h2.page-header Login
+    p
+      | Login using your email and password
+    form(method='post', action='/usrs/login')
+      .form-group
+        label Email
+        input.form-control(name='email', type='email', placeholder='Enter email')
+      .form-group
+        label Password
+        input.form-control(name='password', type='password', placeholder='Enter password')
+      input.btn.btn-primary(type='submit', value='login')

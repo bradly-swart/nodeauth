@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  h2.page-header Register
+    br
+    br
+    p
+      | Please sign up using form bellow
+    form(method='post', action='/usrs/register', enctype='multipart/form-data')
+      .form-group
+        label Name
+        input.form-control(name='name', type='text', placeholder='Enter Name')
+      .form-group
+        label Email
+        input.form-control(name='email', type='email', placeholder='Enter email')
+      .form-group
+        label Password
+        input.form-control(name='password', type='password', placeholder='Enter password')
+      .form-group
+        label Confirm Password
+        input.form-control(name='passwordConfirm', type='password', placeholder='Confirm password')
+      .form-group
+        label Profile Pic
+        input.form-control(name='profilePic', type='file')
+      input.btn.btn-primary(type='submit', value='Sign up')
