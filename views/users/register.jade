@@ -6,7 +6,10 @@ block content
     br
     p
       | Please sign up using form bellow
-    form(method='post', action='/usrs/register', enctype='multipart/form-data')
+    if errors
+      each errorMessage, i in errors
+        div.alert.alert-danger #{errorMessage}
+    form(method='post', action='/users/register', enctype='multipart/form-data')
       .form-group
         label Name
         input.form-control(name='name', type='text', placeholder='Enter Name')
