@@ -4,6 +4,7 @@ html
     title Welcome
     // Bootstrap core CSS
     link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='/stylesheets/style.css', rel='stylesheet')
   body
     nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4
       a.navbar-brand(href='#') NodeAuth
@@ -29,6 +30,7 @@ html
             a.nav-link(href='/users/logout') Logout
       // /.nav-collapse
     .container
+     != messages()
      block content
     hr
     footer
