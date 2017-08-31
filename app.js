@@ -70,6 +70,10 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.get('*', function(req, res, next){
+  res.locals.user = req.user || null
+  next()
+})
 // Specify routes to uses
 app.use('/', index);
 app.use('/users', users);
